@@ -31,8 +31,7 @@ app.use((error, req, res, next) => {
 const PORT = process.env.PORT || 8080;
 mongoose
   .connect(
-    process.env.MONGO_URL ||
-      "mongodb+srv://johnmarky:jmn08082006@users.14sswne.mongodb.net/?retryWrites=true&w=majority",
+    process.env.MONGO_URL,
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
