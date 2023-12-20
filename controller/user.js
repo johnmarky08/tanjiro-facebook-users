@@ -30,7 +30,11 @@ export const createUser = async (req, res) => {
     await newUser.save();
 
     const user = await User.find({ uid });
+<<<<<<< HEAD
     res.status(201).json({ result: user });
+=======
+    res.status(201).json({result: user});
+>>>>>>> d99f6318d5c6afdb0ea4020542af2e30875cf1f6
   } catch (err) {
     res.status(409).json({ message: err.message });
   }
@@ -41,7 +45,11 @@ export const getUser = async (req, res) => {
   try {
     const { uid } = req.query;
     const user = await User.find({ uid });
+<<<<<<< HEAD
     res.status(200).json({ result: user });
+=======
+    res.status(200).json({result: user});
+>>>>>>> d99f6318d5c6afdb0ea4020542af2e30875cf1f6
   } catch (err) {
     res.status(404).json({ message: err.message });
   }
