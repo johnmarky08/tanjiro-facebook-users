@@ -30,20 +30,10 @@ app.use((error, req, res, next) => {
 
 const PORT = process.env.PORT || 8080;
 mongoose
-<<<<<<< HEAD
   .connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
-=======
-  .connect(
-    process.env.MONGO_URL,
-    {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    }
-  )
->>>>>>> d99f6318d5c6afdb0ea4020542af2e30875cf1f6
   .then(() => {
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
   })
